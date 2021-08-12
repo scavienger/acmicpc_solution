@@ -5,21 +5,21 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ * 최소공배수
+ * https://www.acmicpc.net/problem/1934
+ */
 public class Number1934 {
-
-    private static int N;
-    private static int A;
-    private static int B;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine().trim());
-        N = Integer.valueOf(st.nextToken());
-        for (int i = 0; i < N; i++) {
+        int n = Integer.valueOf(st.nextToken());
+        for (int i = 0; i < n; i++) {
             st = new StringTokenizer(br.readLine().trim());
-            A = Integer.valueOf(st.nextToken());
-            B = Integer.valueOf(st.nextToken());
-            System.out.println(A * B / gcd(A, B));
+            int a = Integer.valueOf(st.nextToken());
+            int b = Integer.valueOf(st.nextToken());
+            System.out.println(a * b / gcd(a, b));
         }
     }
 
